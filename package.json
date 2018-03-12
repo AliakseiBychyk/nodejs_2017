@@ -4,8 +4,20 @@
   "description": "Node.js training project from 2017 program",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app --require babel-core/register",
+    "test": "node_modules/.bin/mocha --require babel-core/register",
+    "cover": "istanbul cover node_modules/.bin/_mocha -- --require babel-core/register"
   },
   "author": "Aliaksei Bychyk",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^5.0.4"
+  },
+  "dependencies": {
+
+  }
 }
